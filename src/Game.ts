@@ -29,6 +29,9 @@ class PlayerController extends ObjBehavior {
 // Game class
 export default class Game {
 	#objects: GameObject[]
+	#linked: boolean = false
+	#canvas: HTMLCanvasElement
+	#context: CanvasRenderingContext2D
 	constructor(objects: GameObject[]) {
 		this.#objects = objects;
 	}
