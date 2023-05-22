@@ -1,0 +1,5 @@
+details:
+  nomenclature:
+    author: "MaverickQuill"
+    name: "Flailing Fowl"
+entrypoint: "game.js"
