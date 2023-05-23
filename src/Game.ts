@@ -1,4 +1,4 @@
-import { v4 } from "uuid";
+import { v4 as uuid } from "uuid";
 import GameObject from './GameObject'
 
 export default class Game {
@@ -15,7 +15,7 @@ export default class Game {
 	start() {
 		for (let i = 0; i < this.#objects.length; i++) {
 			const object = this.#objects[i];
-			object.id = v4(); // Assign IDs in the for loop
+			object.id = uuid(); // Assign IDs in the for loop
 			object.onCreate();
 		}
 
@@ -32,6 +32,7 @@ export default class Game {
 		};
 		requestAnimationFrame(gameLoop);
 	}
+	
 	link(canvas: HTMLCanvasElement) {
 		if(canvas) {
 			const context = canvas.getContext('2d');

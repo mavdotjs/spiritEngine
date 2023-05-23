@@ -6,13 +6,21 @@ export default class GameObject {
     id: string;
     game: Game;
     pos: Point;
+	outfits: { [name: string]: HTMLImageElement };
+	currentOutfit: string;
     behaviors: Behavior[];
 
-	constructor(game: Game, behaviors: Behavior[]) {
+	constructor(game: Game, outfits: { [name: string]: HTMLImageElement }, behaviors: Behavior[]) {
 		this.game = game;
 		this.id = "";
 		this.pos = new Point(0, 0)
 		this.behaviors = behaviors
+		this.outfits = outfits
+		this.currentOutfit = ""
+	}
+
+	#renderCurrentOutfit() {
+
 	}
 
 	onCreate() {

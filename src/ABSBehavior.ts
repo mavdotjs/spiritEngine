@@ -1,9 +1,9 @@
 import GameObject from './GameObject'
 
 export default abstract class Behavior {
-	// @ts-ignore
+	// @ts-ignore (ignore not defined in constructor, it is defined later)
 	object: GameObject;
-	// @ts-ignore
+	// @ts-ignore (ignore not defined in constructor, it is defined later)
 	id: string;
 	constructor() {}
 	onCreate() {}
