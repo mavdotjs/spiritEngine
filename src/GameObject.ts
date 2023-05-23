@@ -6,8 +6,8 @@ export default class GameObject {
     id: string;
     game: Game;
     pos: Point;
-	outfits: { [name: string]: HTMLImageElement };
-	currentOutfit: string;
+	#outfits: { [name: string]: HTMLImageElement };
+	#currentOutfit: string;
     behaviors: Behavior[];
 
 	constructor(game: Game, outfits: { [name: string]: HTMLImageElement }, behaviors: Behavior[]) {
@@ -15,12 +15,12 @@ export default class GameObject {
 		this.id = "";
 		this.pos = new Point(0, 0)
 		this.behaviors = behaviors
-		this.outfits = outfits
-		this.currentOutfit = ""
+		this.#outfits = outfits
+		this.#currentOutfit = ""
 	}
 
-	#renderCurrentOutfit() {
-
+	renderCurrentOutfit(context: CanvasRenderingContext2D) {
+		context.drawImage(this.#outfits[this.#currentOutfit], this.pos.x, this.pos.y)
 	}
 
 	onCreate() {
