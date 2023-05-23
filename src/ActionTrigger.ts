@@ -1,7 +1,7 @@
-export enum EnumTrigger {
+export enum EnumAction {
     onCreate,
     frameStart,
     frameEnd,
 }
 
-export class Trigger {}
+export default class Action {}
