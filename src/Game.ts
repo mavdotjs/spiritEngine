@@ -24,13 +24,19 @@ export default class Game {
 			for (const object of this.#objects) {
 				object.frameStart();
 				if(this.#linked) {
-					// Render
+					this.renderObjects();
 				}
 				object.frameEnd();
 			}
 			requestAnimationFrame(gameLoop);
 		};
 		requestAnimationFrame(gameLoop);
+	}
+
+	renderObjects() {
+		for(let object of this.#objects) {
+			object.renderCurrentOutfit(this.#context)
+		}
 	}
 	
 	link(canvas: HTMLCanvasElement) {
