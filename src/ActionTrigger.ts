@@ -4,4 +4,8 @@ export enum EnumAction {
     frameEnd,
 }
 
-export default class Action {}
+export default class Action {
+    check(): boolean {
+
+    }
+}

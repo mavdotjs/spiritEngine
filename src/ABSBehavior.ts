@@ -10,8 +10,8 @@ export default abstract class Behavior {
 		this.#triggers = triggers;
 	}
 
-	callTrigger() {
-		
+	callTrigger(key: string) {
+		this.#triggers.
 	}
 }
 

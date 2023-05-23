@@ -25,13 +25,13 @@ export default class GameObject {
 
 	onCreate() {
 		for (const behavior of this.behaviors) {
-				behavior.callTrigger('onCreate');
+			behavior.callTrigger('onCreate');
 		}
 	}
 
 	frameStart() {
 		for (const behavior of this.behaviors) {
-				behavior.callTrigger('onFrameStart');
+			behavior.callTrigger('onFrameStart');
 		}
 	}
 
