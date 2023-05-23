@@ -1,22 +1,18 @@
 import Game from './Game'
-import ObjBehavior from "./ABSBehavior";
+import Behavior from './ABSBehavior';
 
 
 export default class GameObject {
     id: string;
     game: Game;
     pos: Point;
-    velocity: Point;
-    behaviors: ObjBehavior[];
+    behaviors: Behavior[];
 
-	constructor(game, behaviors = []) {
-		Object.defineProperty(this, "behaviors", {
-			value: behaviors,
-			writable: false,
-		});
-
+	constructor(game: Game, behaviors: Behavior[]) {
 		this.game = game;
 		this.id = "";
+		this.pos = new Point(0, 0)
+		this.behaviors = behaviors
 	}
 
 	onCreate() {

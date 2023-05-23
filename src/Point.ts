@@ -1,12 +1,12 @@
 class Point {
     x: number;
     y: number;
-    constructor(x, y) {
+    constructor(x: number, y: number) {
         this.x = x;
         this.y = y;
     }
 
-    set(x, y) {
+    set(x: number, y: number) {
         this.x = x;
         this.y = y;
     }
