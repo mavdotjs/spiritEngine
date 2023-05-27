@@ -1,6 +1,7 @@
 import GameObject from './GameObject'
 import { Action } from './main';
 export default abstract class Behavior {
+	//! I wish TS had ways to define things that are designed to be defined externally..
 	// @ts-ignore (ignore not defined in constructor, it is defined later)
 	object: GameObject;
 	// @ts-ignore (ignore not defined in constructor, it is defined later)
